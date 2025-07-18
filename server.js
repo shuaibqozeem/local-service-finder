@@ -79,7 +79,6 @@ app.post('/signup', async (req, res) => {
       fullname,
       username,
       email,
-      password: hashedPassword,
     });
 
     await newUser.save();
