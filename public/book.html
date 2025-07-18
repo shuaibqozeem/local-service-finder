@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCare Pro.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>FlashCare Pro.</h1>
+        <div class="nav">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                    <!-- <a href="/about">ABOUT US</a> -->
+                    <a href="/contact">Contact</a>
+                    <!-- <a href="/services">OUR SERVICES</a> -->
+                    <a href="/signup">Sign in</a>
+                    <a href="/login">Login</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <!-- Service Booking Section -->
+    <div class="book-heading">
+        <h1>BOOK FOR A SERVICE</h1>
+    </div>
+    <div class="content">
+        <div class="booking-container">
+            <h2>Book a Service</h2>
+            <form id="bookingForm">
+                <label for="serviceType">Service Type:</label>
+                <select id="serviceType" required>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Painting">Painting</option>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="Cleaning">Cleaning</option>
+                </select>
+    
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+    
+                <label for="time">Time:</label>
+                <input type="time" id="time" required>
+    
+                <label for="address">Address:</label>
+                <input type="text" id="address" placeholder="Your Address" required>
+    
+                <label for="notes">Additional Notes:</label>
+                <textarea id="notes" placeholder="Enter any specific requests"></textarea>
+    
+                <button type="submit">Book Now</button>
+            </form>
+        </div>
+    
+        <!-- Live Chat Section -->
+        <div class="chat-container">
+            <h2>Live Chat</h2>
+            <div class="chat-box" id="chatBox">
+                <div id="messages"></div>
+            </div>
+            <input type="text" id="chatInput" placeholder="Type your message here..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>FlashCare Pro</h2>
+                <p>Providing expert and professional services at your doorstep. Your satisfaction is our priority.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <!-- <li><a href="about.html">About Us</a></li> -->
+                    <!-- <li><a href="services.html">Our Services</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone-alt"></i> +234 8087592569</p>
+                <p><i class="fas fa-envelope"></i> flashcarepro@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> no 1 shagali close k/west kaduna</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FlashCare Pro. All rights reserved.</p>
+        </div>
+    </footer>
+    <script  src="book.js"></script>
+</body>
+</html>
