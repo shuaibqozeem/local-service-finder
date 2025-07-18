@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
 const nodemailer = require('nodemailer');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
 
 // Load environment variables from .env file
