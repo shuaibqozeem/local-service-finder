@@ -1,11 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const hamburger = document.querySelector(".hamburger");
-    const nav = document.querySelector(".nav");
+  const hamburger = document.querySelector(".hamburger");
+  const nav = document.querySelector(".nav");
+  const navLinks = document.querySelectorAll(".nav a");
 
-    // Toggle navigation menu
-    hamburger.addEventListener("click", () => {
-        nav.classList.toggle("active");
+  // Toggle nav on hamburger click
+  hamburger.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  // Close nav when a nav link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
     });
+  });
+
 
     // Smooth Scrolling with Element Check
 document.querySelectorAll(".nav a").forEach(anchor => {

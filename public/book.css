@@ -295,6 +295,9 @@ body {
     .chat-container button {
         width: 100%;
     }
+    .content{
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
