@@ -273,14 +273,6 @@ button:hover {
         z-index: 999;
       }
     
-      .nav ul {
-        /* flex-direction: column; */
-        /* gap: 10px; */
-      }
-    
-      .nav a {
-        /* padding: 10px 20px; */
-      }
 
   .footer-container {
     flex-direction: column;
