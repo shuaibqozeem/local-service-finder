@@ -94,15 +94,19 @@ app.post('/signup', async (req, res) => {
 });
 
 // Login Route
+// Login Route (No bcrypt)
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
   try {
     const user = await User.findOne({ email });
-    if (!user) return res.status(401).json({ message: 'Invalid email or password.' });
+    if (!user) {
+      return res.status(401).json({ message: 'Invalid email or password.' });
+    }
 
-    const isPasswordValid = await bcrypt.compare(password, user.password);
-    if (!isPasswordValid) return res.status(401).json({ message: 'Invalid email or password.' });
+    if (user.password !== password) {
+      return res.status(401).json({ message: 'Invalid email or password.' });
+    }
 
     res.json({ message: 'Login successful!' });
   } catch (error) {
@@ -110,6 +114,7 @@ app.post('/login', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error. Please try again later.' });
   }
 });
+
 
 // Booking Route
 app.post('/book', (req, res) => {
