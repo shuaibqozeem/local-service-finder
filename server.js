@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 // const bcrypt = require('bcrypt');
 const bodyParser = require('body-parser');
@@ -12,6 +13,8 @@ dotenv.config();
 
 // Initialize Express app
 const app = express();
+app.use(cors());
+
 
 // Define port
 const PORT = process.env.PORT || 5000;
