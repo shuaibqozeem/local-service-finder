@@ -201,7 +201,9 @@ button:hover {
 .footer-links a:hover {
   color: #f1c40f;
 }
-
+  #hamburger{
+    display: none;
+  }
 .footer-contact p {
   margin: 5px 0;
 }
@@ -268,6 +270,57 @@ button:hover {
     margin: 10px 0;
   }
 }
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .heading {
+    position: relative;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    background-color: white;
+    z-index: 10;
+  }
+
+  #hamburger {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 20;
+    margin-right: 16ch;
+    margin-top: -30px;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    width: 250px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .heading.active .nav {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 12px 10px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .nav a:last-child {
+    border-bottom: none;
+  }
+}
+
 
 @media (max-width: 480px) {
   .heading h1 {
@@ -275,12 +328,14 @@ button:hover {
   }
 
   .signup-container {
-    width: 100%;
-    padding: 20px;
+      display: flex;
+      width: fit-content;
+      flex-direction: column; /* Stack form fields vertically */
   }
 
   input {
     padding: 10px;
+    /* width: 300px; */
   }
 
   button {

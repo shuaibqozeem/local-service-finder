@@ -272,7 +272,7 @@ body {
     .hero-1 {
         text-align: center;
     }
-       .nav {
+    .nav {
     position: absolute;
     top: 80px;
     right: 0;
@@ -282,7 +282,7 @@ body {
     flex-direction: column;
     gap: 10px;
     padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); */
     
     /* Initially hidden */
     transform: translateX(100%);
@@ -302,13 +302,14 @@ body {
     gap: 10px;
   }
 
-  .hamburger {
+  /* .hamburger {
     display: flex;
-  }
+  } */
 
       .hamburger {
         display: flex; /* Show hamburger icon */
-        margin-right: 50px;
+        margin-right: 30ch;
+        
       }
 
     .hero-1-writeUp h1 {
@@ -325,6 +326,11 @@ body {
 
     .our-work-img {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    .sub-hero{
+        display: block;
+        /* justify-content: center; */
+        text-align: center;
     }
 }
 

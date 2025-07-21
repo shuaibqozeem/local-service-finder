@@ -53,7 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Hamburger menu toggle
-  document.getElementById('hamburger').addEventListener('click', function () {
-    document.querySelector('.heading').classList.toggle('active');
-  });
+
+const heading = document.querySelector('.heading');
+document.getElementById('hamburger').addEventListener('click', function () {
+  heading.classList.toggle('active');
 });
+
+});
+
+
