@@ -39,7 +39,7 @@ document.querySelectorAll(".nav a").forEach(anchor => {
     // Dynamic Services Loading
     const servicesList = document.querySelector(".services-list");
     if (servicesList) {
-        const services = ["Plumbing", "Electrical Repairs", "Painting", "Cleaning", "Carpentry"];
+        // const services = ["Plumbing", "Electrical Repairs", "Painting", "Cleaning", "Carpentry"];
 
         services.forEach(service => {
             const div = document.createElement("div");
